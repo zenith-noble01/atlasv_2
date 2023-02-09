@@ -1,0 +1,182 @@
+@import "./constants";
+
+.app__dashboard {
+  width: 100%;
+  display: flex;
+  gap: var(--gap);
+
+  .left__container {
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    gap: var(--gap);
+
+    .dashboard__greetings {
+      height: 192px;
+      position: relative;
+
+      .hello__user-content {
+        height: 152px;
+        background: var(--light-color);
+        width: 100%;
+        border-radius: 10px;
+        position: absolute;
+        bottom: 0px;
+        padding: 2rem 4rem;
+
+        p {
+          font-size: 1rem;
+        }
+      }
+
+      img {
+        position: absolute;
+        right: 4rem;
+      }
+    }
+
+    .recent__course {
+      height: 80px;
+      @include flexAlign;
+      gap: var(--gap);
+
+      .course__container {
+        @include flexAlign;
+        gap: var(--gap);
+        background: var(--light-color);
+        width: 80%;
+        height: 100%;
+        padding: 0 1rem 0 0.5rem;
+        border-radius: 14px;
+        .course__icon {
+          height: 64px;
+          width: 64px;
+          background: var(--primary-color);
+          @include flexCenter;
+          border-radius: 12px;
+        }
+
+        .course__content {
+          @include flexAlign;
+          gap: var(--gap);
+          justify-content: space-between;
+          flex: 1;
+
+          .course__name {
+            font-weight: bold;
+            line-height: 13px;
+          }
+
+          .progress {
+            position: relative;
+            height: 64px;
+            width: 64px;
+            @include flexCenter;
+            p {
+              width: 100%;
+              height: 100%;
+              position: absolute;
+              top: 0;
+              left: 0;
+              font-size: 0.7rem;
+              @include flexCenter;
+            }
+          }
+
+          .cta {
+            button {
+              @include button;
+            }
+          }
+        }
+      }
+
+      .arrow__container {
+        width: 20%;
+        @include flexAlign;
+        gap: var(--gap);
+
+        svg {
+          height: 40px;
+          width: 40px;
+          cursor: pointer;
+        }
+      }
+    }
+
+    .dashboard__courses {
+      display: flex;
+      flex-direction: column;
+      gap: var(--gap);
+
+      .course__header {
+        @include flexAlign;
+        list-style: none;
+        gap: 1rem;
+        .header__route {
+          cursor: pointer;
+          transition: var(--trans);
+          font-weight: 900;
+          color: gray;
+          &.active {
+            color: black;
+          }
+        }
+      }
+
+      .courses__container {
+        @include direction;
+        gap: 1rem;
+
+        .course__content {
+          height: 80px;
+          background: var(--light-color);
+          border-radius: 14px;
+          @include flexAlign;
+          padding: 0 0.5rem;
+          gap: 1rem;
+
+          .course__icon {
+            height: 64px;
+            width: 64px;
+            border-radius: 8px;
+            background: var(--primary-color);
+          }
+
+          .course__wrapper {
+            flex: 1;
+            padding-right: 0.5rem;
+            justify-content: space-between;
+            display: flex;
+            @include flexAlign;
+            p {
+              @include direction;
+              font-weight: bold;
+              span {
+                font-size: 0.7rem;
+                font-weight: 400;
+              }
+            }
+
+            .timestamp {
+              @include flexAlign;
+              gap: 1rem;
+            }
+            .rating {
+              gap: 1rem;
+              @include flexAlign;
+            }
+
+            button {
+              @include button;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .right__container {
+    flex: 0.5;
+  }
+}

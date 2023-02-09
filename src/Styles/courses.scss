@@ -1,0 +1,57 @@
+@import "./constants";
+.app__courses {
+  @include direction;
+  gap: var(--gap);
+
+  .courses__header {
+    @include flexAlign;
+    width: 100%;
+    justify-content: center;
+    gap: var(--gap);
+    position: sticky;
+    top: 0;
+    background: var(--primary-color);
+    padding: 0.5rem 0;
+
+    input {
+      @include input;
+      outline: none;
+      border: 3px solid var(--secondary-color);
+      background: var(--light-color);
+    }
+
+    button {
+      @include button;
+    }
+  }
+
+  .courses__container-conent {
+    display: grid;
+    gap: 1rem;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+
+    .course_content-d {
+      background: var(--primary-color);
+      border-radius: 8px;
+      overflow: hidden;
+      box-shadow: var(--container__shadow);
+      height: fit-content;
+
+      img {
+        width: 100%;
+        max-height: 200px;
+        object-fit: cover;
+      }
+
+      .course__cont {
+        padding: 0.5rem;
+        transition: var(--trans);
+
+        .coursename {
+          font-size: 1.2rem;
+          font-weight: bold;
+        }
+      }
+    }
+  }
+}
