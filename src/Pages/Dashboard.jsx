@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import "../Styles/dashboard.scss";
 import {
   Courses,
@@ -8,8 +8,18 @@ import {
   NumCourse,
   Charts,
 } from "../Components/";
+import { useNavigate } from "react-router-dom";
 
 const Dashboard = () => {
+  const user = JSON.parse(localStorage.getItem("User"));
+  const navigate = useNavigate();
+
+  useEffect(() => {
+    if (!user) {
+      navigate("/login");
+    }
+  }, [user, navigate]);
+
   return (
     <div className="app__dashboard">
       <div className="left__container">
