@@ -14,7 +14,7 @@ const OneCourse = () => {
   useEffect(() => {
     const fetVideo = async () => {
       axios
-        .get(`http://localhost:5000/api/course/${path}`)
+        .get(`https://atlasv2.onrender.com/api/course/${path}`)
         .then((res) => {
           setData(res.data);
         })

@@ -28,7 +28,7 @@ function LoginBox() {
     }));
   };
 
-  let route = "http://localhost:5000/api/auth/register";
+  let route = "https://atlasv2.onrender.com/api/auth/register";
 
   const handleRegister = async (e) => {
     e.preventDefault();

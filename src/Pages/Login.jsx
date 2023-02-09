@@ -25,7 +25,7 @@ function Login() {
     }));
   };
 
-  let route = "http://localhost:5000/api/auth/login";
+  let route = "https://atlasv2.onrender.com/api/auth/login";
 
   const handleSubmit = async (e) => {
     e.preventDefault();

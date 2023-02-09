@@ -11,7 +11,7 @@ const Courses = () => {
   useEffect(() => {
     const getCourses = async () => {
       await axios
-        .get("http://localhost:5000/api/course")
+        .get("https://atlasv2.onrender.com/api/course")
         .then((res) => {
           setCourses(res.data);
         })

@@ -8,7 +8,7 @@ const Forum = () => {
 
   const [chats, setChats] = useState([]);
 
-  let route = "http://localhost:5000/api/chat";
+  let route = "https://atlasv2.onrender.com/api/chat";
 
   const handleSubmit = async (e) => {
     e.preventDefault();
