@@ -41,6 +41,7 @@ function Login() {
           if (res.data) {
             console.log(res.data);
             localStorage.setItem("User", JSON.stringify(res.data));
+            window.location.reload();
           }
         })
         .catch((error) => {
