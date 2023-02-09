@@ -1,10 +1,9 @@
 import React from "react";
 import { BiSearchAlt2 } from "react-icons/bi";
 import { MdOutlineNotificationsActive } from "react-icons/md";
-import { profile } from "../Images";
 import styled from "styled-components";
 
-function SearchBox() {
+function SearchBox({ user }) {
   return (
     <Container className="search-box">
       <div className="input-part">
@@ -15,7 +14,7 @@ function SearchBox() {
         <MdOutlineNotificationsActive />
       </div>
       <div className="profile-part">
-        <img src={profile} alt="profile" />
+        <img src={user?.profilePic} alt="profile" />
       </div>
     </Container>
   );
@@ -29,6 +28,13 @@ const Container = styled.div`
   justify-content: space-between;
   svg {
     height: 1cm;
+  }
+
+  img {
+    height: 40px;
+    width: 40px;
+    border: 1px solid var(--secondary-color);
+    border-radius: 50%;
   }
   .input-part {
     background-color: var(--light-color);

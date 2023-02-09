@@ -20,15 +20,17 @@ const Dashboard = () => {
     }
   }, [user, navigate]);
 
+  console.log(user);
+
   return (
     <div className="app__dashboard">
       <div className="left__container">
-        <Greetings />
+        <Greetings user={user} />
         <RecentCourse />
         <Courses />
       </div>
       <div className="right__container">
-        <SearchBox />
+        <SearchBox user={user} />
         <div>
           <NumCourse />
         </div>
