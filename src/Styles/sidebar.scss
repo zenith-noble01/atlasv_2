@@ -1,0 +1,10 @@
+@import "./constants";
+@import "./variables";
+
+.sidebar {
+  width: 70px;
+  padding: 1rem;
+  border-right: $border;
+  @include flex(column);
+  align-items: center;
+}

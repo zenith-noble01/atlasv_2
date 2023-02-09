@@ -1,0 +1,32 @@
+@import "./constants";
+@import "./variables";
+
+.navbar {
+  padding: 1rem;
+  border-radius: 1rem;
+  height: 50px;
+  @include flexAlign;
+
+  ul {
+    @include routes;
+
+    li {
+      &.icon {
+        height: 25px;
+        width: 25px;
+        border-radius: 5px;
+        @include flexAlign;
+        @include backdrop;
+      }
+
+      &.icon2 {
+        border-radius: 5px;
+        @include backdrop;
+        height: 25px;
+        min-width: 20px;
+        @include flexAlign;
+        padding: 0.3rem;
+      }
+    }
+  }
+}

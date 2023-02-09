@@ -9,6 +9,7 @@ import {
   CreateAccount,
   TeacherDashboard,
   Forum,
+  NewClass,
 } from "./Pages";
 const App = () => {
   const location = useLocation();
@@ -19,17 +20,16 @@ const App = () => {
       className={
         pathname === "login" ||
         pathname === "register" ||
-        pathname === "teacher"
+        pathname === "newclass"
           ? "app no__route"
           : "app"
       }
     >
       {pathname === "login" ||
       pathname === "register" ||
-      pathname === "teacher" ? null : (
+      pathname === "newclass" ? null : (
         <Dsidebar />
       )}
-
       <div className="">
         <Routes>
           <Route index element={<Dashboard />} />
@@ -39,6 +39,7 @@ const App = () => {
           <Route path="/assesments/:id" element={<OneCourse />} />
           <Route path="/teacher" element={<TeacherDashboard />} />
           <Route path="/forum" element={<Forum />} />
+          <Route path="/newclass" element={<NewClass />} />
         </Routes>
       </div>
     </div>

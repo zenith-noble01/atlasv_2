@@ -5,6 +5,7 @@ import Login from "./Login";
 import CreateAccount from "./CreateAccount";
 import TeacherDashboard from "./TeacherDashboard";
 import Forum from "./Forum";
+import NewClass from "./Newclass";
 export {
   Dashboard,
   Courses,
@@ -13,4 +14,5 @@ export {
   CreateAccount,
   TeacherDashboard,
   Forum,
+  NewClass,
 };

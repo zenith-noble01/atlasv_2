@@ -15,18 +15,29 @@
   flex-direction: column;
 }
 
-@mixin routes($direction) {
-  list-style: none;
+@mixin routes {
   display: flex;
   align-items: center;
-  justify-content: center;
-  flex-direction: $direction;
+  gap: 1rem;
+  list-style: none;
 
-  a {
-    gap: 1rem;
+  li {
     cursor: pointer;
   }
 }
+
+// @mixin routes($direction) {
+//   list-style: none;
+//   display: flex;
+//   align-items: center;
+//   justify-content: center;
+//   flex-direction: $direction;
+
+//   a {
+//     gap: 1rem;
+//     cursor: pointer;
+//   }
+// }
 
 @mixin button {
   background: var(--secondary-color);
@@ -38,6 +49,33 @@
   font-weight: bold;
   cursor: pointer;
   border-radius: 8px;
+}
+
+@mixin flex($direction) {
+  display: flex;
+  flex-direction: $direction;
+}
+
+@mixin bg($link) {
+  background: url($link);
+  background-position: center;
+  background-size: cover;
+}
+
+@mixin text {
+  @include flex(column);
+  gap: $lg-gap;
+  text-align: center;
+  h1 {
+    font-size: 2rem;
+    background: red;
+  }
+}
+
+@mixin backdrop {
+  background: $l-bg;
+  backdrop-filter: blur(1px);
+  box-shadow: 0 0px 10px rgb(0, 0, 0, 0.2);
 }
 
 @mixin direction {

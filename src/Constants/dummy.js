@@ -44,6 +44,25 @@ export const sidebarRoutes = [
   },
 ];
 
+export const videoOptions = [
+  {
+    name: "scale",
+  },
+  {
+    name: "mic",
+  },
+  {
+    name: "call",
+    class: "call",
+  },
+  {
+    name: "video",
+  },
+  {
+    name: "settings",
+  },
+];
+
 export const courses = [
   {
     courname: "Mathematics",

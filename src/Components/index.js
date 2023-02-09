@@ -11,7 +11,11 @@ import LoginBox from "./LoginBox";
 import TsideBar from "./TsideBar";
 import Theader from "./Theader";
 import Tbody from "./Tbody";
+import Navbar from "./Navbar";
+import Video from "./Video";
+import VideoPlayer from "./VideoPlayer";
 import TsideContent from "./TsideContent";
+import Sidebar from "./Sidebar";
 
 export {
   Dsidebar,
@@ -28,4 +32,8 @@ export {
   Theader,
   Tbody,
   TsideContent,
+  VideoPlayer,
+  Video,
+  Navbar,
+  Sidebar,
 };

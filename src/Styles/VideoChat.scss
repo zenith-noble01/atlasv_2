@@ -1,0 +1,19 @@
+@import "./constants";
+@import "./variables";
+
+.app__videochat {
+  padding: 2rem 5rem;
+  @include bg("../Images/1.jpg");
+  height: 100vh;
+  transition: $trans;
+
+  .video__container {
+    height: 100%;
+    width: 100%;
+    @include flex(row);
+    gap: 1rem;
+    border: $border;
+    border-radius: 1rem;
+    overflow: hidden;
+  }
+}

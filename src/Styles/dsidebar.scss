@@ -19,7 +19,7 @@
   }
 
   .sidebar__routes {
-    @include routes(column);
+    @include direction;
     position: absolute;
     top: 20%;
 

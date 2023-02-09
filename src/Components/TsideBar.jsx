@@ -20,7 +20,7 @@ function TsideBar() {
         Dashboard
       </div>
       <div className="other-links">
-        <NavLinkToPage to="/">
+        <NavLinkToPage to="/newclass">
           <AiFillHome />
           start a class
         </NavLinkToPage>
@@ -32,7 +32,7 @@ function TsideBar() {
           <GoPerson />
           Assessments
         </NavLinkToPage>
-        <NavLinkToPage to="/">
+        <NavLinkToPage to="/forum">
           <MdForum />
           Forum
         </NavLinkToPage>
