@@ -1,0 +1,118 @@
+@import "./variables";
+@import "./constants";
+
+.app__auth {
+  min-height: 100vh;
+  background: #f4f1ec;
+  //   @include flexCenter;
+  padding: $gap $l-gap + 3rem;
+
+  .auth__container {
+    @include flexDirection(column);
+    gap: 3rem;
+
+    .auth__header {
+      text-align: center;
+
+      h1 {
+        font-size: $l-gap - 0.5rem;
+        color: $t-green;
+      }
+
+      p {
+        color: $green;
+      }
+    }
+
+    .recent__container {
+      @include flexDirection(column);
+      gap: $xs-gap;
+      width: 70%;
+      align-self: center;
+
+      .add__container {
+        .nouser {
+          background: $mandy;
+          color: $soft-white;
+          width: fit-content;
+          border-radius: 10px;
+          @include flexDirection(column);
+          align-items: center;
+          padding: $sm-gap;
+          gap: $gap;
+          .plus_circle {
+            height: 50px;
+            width: 50px;
+            border-radius: 50%;
+            background: $l-mandy;
+            @include flexCenter;
+            cursor: pointer;
+            @include shadow;
+            font-size: $gap;
+          }
+        }
+      }
+    }
+    .or__container {
+      position: relative;
+      height: 1px;
+      width: 100%;
+      background: $green;
+
+      p {
+        position: absolute;
+        height: 50px;
+        width: 50px;
+        border-radius: 50%;
+        @include flexCenter;
+        background: #f4f1ec;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        margin: auto;
+      }
+    }
+
+    .login__form {
+      background: white;
+      @include shadow;
+      padding: $gap;
+      border-radius: 10px;
+      @include flexCenter;
+
+      .auth__form {
+        @include flexDirection(column);
+        gap: $sm-gap;
+        width: 60%;
+
+        .inputs {
+          @include flexDirection(row);
+          gap: $gap;
+
+          .input__container {
+            border: 1px solid $black;
+            padding: $xs-gap $sm-gap;
+            position: relative;
+            flex: 1;
+            border-radius: 10px;
+            input {
+              border: none;
+              outline: none;
+              background: none;
+              width: 100%;
+            }
+
+            svg {
+              position: absolute;
+              cursor: pointer;
+              height: 100%;
+              top: 0;
+              right: 10px;
+            }
+          }
+        }
+      }
+    }
+  }
+}
