@@ -14,6 +14,7 @@ const LoadImg = ({ src, className }) => {
           hash="LKO2?U00%2yA#AoMxZj[M{aeWBWV"
           width={400}
           height={300}
+          className="mage"
         />
       )}
       <img

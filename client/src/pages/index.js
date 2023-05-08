@@ -7,7 +7,7 @@ const fakeDelay = (promise) => {
     }).then(() => promise)
 }
 
-const Landing = lazy(() => import("./Landing"))
+const Landing = lazy(() => fakeDelay(import("./Landing")))
 const Register = lazy(() => import("./Register"))
 const Login = lazy(() => import("./Login"))
 

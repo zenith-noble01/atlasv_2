@@ -2,6 +2,7 @@ import React, { Suspense } from "react";
 import "./styles/app.scss";
 import { Landing, Login, Register } from "./pages";
 import { Routes, Route } from "react-router-dom";
+import { Loading } from "./components";
 
 const App = () => {
   return (
@@ -10,7 +11,7 @@ const App = () => {
         <Route
           path="/"
           element={
-            <Suspense fallback={<div>loading...</div>}>
+            <Suspense fallback={<Loading />}>
               <Landing />
             </Suspense>
           }
