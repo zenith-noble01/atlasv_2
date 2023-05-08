@@ -1,5 +1,15 @@
-import Landing from "./Landing";
-import Login from "./Login";
-import Register from "./Register";
+import { lazy } from "react";
 
-export { Landing, Register, Login };
+
+const fakeDelay = (promise) => {
+    return new Promise((resolve,) => {
+        setTimeout(resolve, 3000)
+    }).then(() => promise)
+}
+
+const Landing = lazy(() => import("./Landing"))
+const Register = lazy(() => import("./Register"))
+const Login = lazy(() => import("./Login"))
+
+
+export { Landing, Register, Login }

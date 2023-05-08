@@ -31,7 +31,7 @@ const Login = () => {
         </div>
         <div className="auth__right">
           <div className="right__header">
-            <p>Register</p>
+            <p>Login</p>
           </div>
           <form onSubmit={handleSubmit} className="auth__form">
             <div className="input__container">
