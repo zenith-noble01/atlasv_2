@@ -32,22 +32,6 @@ const Login = () => {
           <h1>Welcome back</h1>
           <p>Join Cameroon Largest Learning community.</p>
         </div>
-        {/*    <div className="recent__container">
-          <div className="recent__header">
-            <p>Recent Logins</p>
-          </div>
-          <div className="add__container">
-            <div className="nouser">
-              <div className="plus_circle">
-                <BiPlus />
-              </div>
-              <p>Add account</p>
-            </div>
-          </div>
-        </div>
-        <div className="or__container">
-          <p>or</p>
-        </div> */}
         <div className="login__form">
           <form className="auth__form" onSubmit={handleSubmit}>
             <div className="inputs">
