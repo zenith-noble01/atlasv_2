@@ -19,7 +19,7 @@ const App = () => {
         <Route
           path="login"
           element={
-            <Suspense fallback={<div>loading...</div>}>
+            <Suspense fallback={<Loading />}>
               <Login />
             </Suspense>
           }
@@ -27,7 +27,7 @@ const App = () => {
         <Route
           path="register"
           element={
-            <Suspense fallback={<div>loading...</div>}>
+            <Suspense fallback={<Loading />}>
               <Register />
             </Suspense>
           }
