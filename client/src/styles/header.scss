@@ -1,0 +1,44 @@
+@import "./constants";
+@import "./variables";
+
+.app__header {
+  height: 70px;
+  @include flexBetween;
+  padding: 0 $l-gap;
+
+  ul {
+    @include flexAlign;
+    gap: $sm-gap;
+  }
+
+  .logo {
+    font-size: $gap;
+    font-weight: bold;
+    color: $mandy;
+  }
+
+  .header__routes ul a {
+    color: $text-secondary;
+    font-family: $space-grotesk;
+  }
+
+  .header__cta {
+    @include flexAlign;
+
+    gap: $gap;
+
+    .cta__btn {
+      border: 1px solid $mandy;
+      transition: $transition;
+      color: $mandy;
+      padding: $xs-gap $gap;
+      border-radius: $gap;
+      font-weight: bold;
+
+      &.active {
+        background: $mandy;
+        color: $hint-of-red;
+      }
+    }
+  }
+}

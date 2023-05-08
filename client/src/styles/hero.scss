@@ -1,0 +1,79 @@
+@import "./constants";
+@import "./variables";
+
+.landing__hero {
+  height: calc(100vh - 70px);
+  @include flexAlign;
+  gap: $gap;
+
+  .hero__left {
+    height: 100%;
+    flex: 1;
+    padding-left: $l-gap;
+
+    .left__container {
+      @include flexDirection(column);
+      gap: $gap;
+      padding-top: $l-gap;
+
+      .container__text {
+        @include flexDirection(column);
+        gap: $gap;
+
+        h1 {
+          color: $tuna;
+          font-size: $md-gap;
+
+          span {
+            color: $mandy;
+          }
+        }
+        p {
+          color: $text-secondary;
+        }
+      }
+
+      button {
+        width: fit-content;
+        border: none;
+
+        a {
+          @include button($mandy, $hint-of-red);
+        }
+      }
+    }
+  }
+
+  .hero__right {
+    height: 100%;
+    flex: 1;
+    padding-right: $l-gap;
+    position: relative;
+
+    .circle__girl {
+      img {
+        margin-left: $l-gap;
+        position: initial;
+      }
+    }
+
+    img {
+      position: absolute;
+    }
+
+    .img1 {
+      bottom: 4rem;
+      left: $l-gap;
+    }
+
+    .img3 {
+      top: 35%;
+      right: 17%;
+    }
+
+    .img2 {
+      bottom: 24%;
+      right: 17%;
+    }
+  }
+}
