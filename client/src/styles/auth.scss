@@ -56,30 +56,33 @@
     .or__container {
       position: relative;
       height: 1px;
-      width: 100%;
+      width: 41%;
       background: $green;
 
       p {
         position: absolute;
         height: 50px;
-        width: 50px;
+        width: fit-content;
         border-radius: 50%;
         @include flexCenter;
-        background: #f4f1ec;
+        background: $soft-white;
         top: 0;
         left: 0;
         right: 0;
         bottom: 0;
         margin: auto;
+        padding: 0 $xs-gap;
       }
     }
 
     .login__form {
-      background: white;
+      background: $soft-white;
       @include shadow;
       padding: $gap;
       border-radius: 10px;
       @include flexCenter;
+      flex-direction: column;
+      gap: $gap + 1rem;
 
       .auth__form {
         @include flexDirection(column);
@@ -92,7 +95,7 @@
 
           .input__container {
             border: 1px solid $black;
-            padding: $xs-gap $sm-gap;
+            padding: $xs-gap + 0.2rem $sm-gap;
             position: relative;
             flex: 1;
             border-radius: 10px;
@@ -110,6 +113,68 @@
               top: 0;
               right: 10px;
             }
+          }
+        }
+
+        .actions {
+          width: 100%;
+          @include flexAlign;
+          gap: $gap;
+          font-weight: 500;
+
+          label {
+            flex: 1;
+            @include flexAlign;
+            gap: $xs-gap;
+            cursor: pointer;
+          }
+
+          a {
+            flex: 1;
+            text-decoration: underline;
+          }
+        }
+
+        .cta {
+          @include flexDirection(column);
+          gap: $sm-gap;
+          width: 70%;
+          align-self: center;
+
+          button,
+          a {
+            border: none;
+            background: $t-green;
+            border-radius: 10px;
+            padding: $xs-gap + 0.2rem;
+            color: $soft-white;
+            font-weight: bold;
+            cursor: pointer;
+          }
+
+          a {
+            background: $mandy;
+            text-align: center;
+          }
+        }
+      }
+    }
+
+    .continue__container {
+      @include flexAlign;
+      gap: $sm-gap;
+      .company {
+        height: 20px;
+        width: 20px;
+        img {
+          width: 50px;
+          cursor: pointer;
+        }
+
+        &.facebook {
+          background: red;
+          img {
+            width: 50px;
           }
         }
       }

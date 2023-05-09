@@ -7,17 +7,21 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  font-family: "Space Grotesk", sans-serif;
 }
 
 html {
   font-family: "Montserrat", sans-serif;
   font-family: "Open Sans", sans-serif;
-  font-family: "Space Grotesk", sans-serif;
 }
 
 a {
   text-decoration: none;
   color: inherit;
+}
+
+img {
+  width: 100%;
 }
 
 ul {
