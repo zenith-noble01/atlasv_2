@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { Blurhash } from "react-blurhash";
 
-const LoadImg = ({ src, className }) => {
+const LoadImg = ({ src, className, height, width }) => {
   const [isLoading, setIsLoading] = useState(false);
 
   const handleImageLoad = () => {
@@ -12,8 +12,8 @@ const LoadImg = ({ src, className }) => {
       {!isLoading && (
         <Blurhash
           hash="LKO2?U00%2yA#AoMxZj[M{aeWBWV"
-          width={400}
-          height={300}
+          width={width}
+          height={height ? height : 40}
           className="mage"
         />
       )}
@@ -24,6 +24,8 @@ const LoadImg = ({ src, className }) => {
         style={{ display: isLoading ? "block" : "none" }}
         className={className}
         draggable={false}
+        width={width}
+        height={height}
       />
     </>
   );

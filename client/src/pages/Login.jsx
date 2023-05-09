@@ -79,13 +79,28 @@ const Login = () => {
 
           <div className="continue__container">
             <div className="company google">
-              <LoadImg src={google} className="googleIcon" />
+              <LoadImg
+                src={google}
+                className="googleIcon"
+                height={30}
+                width={30}
+              />
             </div>
             <div className="company facebook">
-              <LoadImg src={facebook} className="facebookIcon" />
+              <LoadImg
+                src={facebook}
+                className="facebookIcon"
+                // height={50}
+                width={70}
+              />
             </div>
             <div className="company twitter">
-              <LoadImg src={twitter} className="twitterIcon" />
+              <LoadImg
+                src={twitter}
+                className="twitterIcon"
+                height={30}
+                width={30}
+              />
             </div>
           </div>
         </div>
