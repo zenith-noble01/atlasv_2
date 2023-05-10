@@ -7,12 +7,13 @@ const LoadImg = ({ src, className, height, width }) => {
   const handleImageLoad = () => {
     setIsLoading(true);
   };
+
   return (
     <>
       {!isLoading && (
         <Blurhash
           hash="LKO2?U00%2yA#AoMxZj[M{aeWBWV"
-          width={width}
+          width={width ? width : 40}
           height={height ? height : 40}
           className="mage"
         />
@@ -24,8 +25,6 @@ const LoadImg = ({ src, className, height, width }) => {
         style={{ display: isLoading ? "block" : "none" }}
         className={className}
         draggable={false}
-        width={width}
-        height={height}
       />
     </>
   );

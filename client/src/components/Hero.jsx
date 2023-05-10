@@ -4,7 +4,7 @@ import { motion } from "framer-motion";
 import { slideIn, textVariant } from "../utils/motion";
 import { Link } from "react-router-dom";
 import { landing, img1, img2, img3 } from "../assets";
-import LoadImg from "./LoadImg";
+import { LoadImg } from "./";
 // import  from "blurhash"
 
 const Hero = () => {
@@ -39,11 +39,11 @@ const Hero = () => {
         variants={slideIn("right", "tween", 0.2, 1)}
       >
         <div className="circle__girl">
-          <img src={landing} alt="" />
+          <LoadImg src={landing} height={523} width={450} />
         </div>
-        <LoadImg className="img1" src={img1} Shots />
-        <LoadImg className="img2" src={img2} />
-        <LoadImg className="img3" src={img3} />
+        <LoadImg className="img1" src={img1} hieght={20} />
+        <LoadImg className="img2" src={img2} hieght={20} />
+        <LoadImg className="img3" src={img3} hieght={20} />
       </motion.div>
     </div>
   );
