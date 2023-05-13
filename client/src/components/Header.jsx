@@ -1,8 +1,10 @@
 import React from "react";
 import "../styles/header.scss";
-import { headerCtas, headerRoutes } from "../constants";
+import { headerRoutes } from "../constants";
 import { Link } from "react-router-dom";
 import { LoginRegisterButton } from "./";
+import { motion } from "framer-motion";
+import { fadeIn } from "../utils/motion";
 
 const Header = () => {
   return (
@@ -13,9 +15,14 @@ const Header = () => {
       <div className="header__routes">
         <ul>
           {headerRoutes.map((route, index) => (
-            <Link to={route.url} key={index}>
-              <li>{route.name}</li>
-            </Link>
+            <motion.li
+              key={index}
+              variants={fadeIn("down", "tween", index * 0.05, 0.5)}
+              initial="hidden"
+              animate="show"
+            >
+              <Link to={route.url}>{route.name}</Link>
+            </motion.li>
           ))}
         </ul>
       </div>

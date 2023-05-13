@@ -12,7 +12,9 @@ const Hero = () => {
     <div className="landing__hero">
       <motion.div
         className="hero__left"
-        variants={slideIn("left", "tween", 0.2, 1)}
+        variants={slideIn("left", "tween", 0.2, 0.5)}
+        animate="show"
+        initial="hidden"
       >
         <div className="left__container">
           <motion.div className="container__text" variants={textVariant()}>
@@ -36,7 +38,9 @@ const Hero = () => {
       </motion.div>
       <motion.div
         className="hero__right"
-        variants={slideIn("right", "tween", 0.2, 1)}
+        variants={slideIn("right", "tween", 0.2, 0.5)}
+        animate="show"
+        initial="hidden"
       >
         <div className="circle__girl">
           <LoadImg src={landing} height={523} width={450} />
