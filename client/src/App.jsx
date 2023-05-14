@@ -1,34 +1,17 @@
-import React, { Suspense } from "react";
-import "./styles/app.scss";
-import { Landing, Login, Register } from "./pages";
+import { Suspense } from "react";
+import { Landing } from "./pages";
 import { Routes, Route } from "react-router-dom";
-import { Loading } from "./components";
+import "./styles/app.scss";
 
 const App = () => {
   return (
-    <div className="app">
+    <div>
       <Routes>
         <Route
           path="/"
           element={
-            <Suspense fallback={<Loading />}>
+            <Suspense fallback={<div>Loading...</div>}>
               <Landing />
-            </Suspense>
-          }
-        />
-        <Route
-          path="login"
-          element={
-            <Suspense fallback={<Loading />}>
-              <Login />
-            </Suspense>
-          }
-        />
-        <Route
-          path="register"
-          element={
-            <Suspense fallback={<Loading />}>
-              <Register />
             </Suspense>
           }
         />

@@ -2,78 +2,63 @@
 @import "./variables";
 
 .landing__hero {
-  height: calc(100vh - 70px);
-  @include flexAlign;
-  gap: $gap;
-
-  .hero__left {
+  height: calc(100vh - 90px);
+  background: url("../assets/smlogo.png");
+  background-size: initial;
+  background-position: center;
+  background-repeat: no-repeat;
+  color: $primary-color;
+  .hero__container {
     height: 100%;
-    flex: 1;
-    padding-left: $l-gap;
+    width: 100%;
+    @include flexDirection(column);
+    text-align: center;
+    padding-top: 90px;
 
-    .left__container {
-      @include flexDirection(column);
-      gap: $gap;
-      padding-top: $l-gap;
-
-      .container__text {
-        @include flexDirection(column);
-        gap: $gap;
-
-        h1 {
-          color: $tuna;
-          font-size: $md-gap;
-
-          span {
-            color: $mandy;
-          }
-        }
-        p {
-          color: $text-secondary;
-        }
-      }
-
-      button {
-        width: fit-content;
-        border: none;
-
-        a {
-          @include button($mandy, $hint-of-red);
-        }
-      }
+    h2 {
+      font-family: Russo One;
+      font-size: 40px;
+      font-weight: 400;
+      line-height: 48px;
+      letter-spacing: 0em;
+      text-align: center;
     }
-  }
 
-  .hero__right {
-    height: 100%;
-    flex: 1;
-    padding-right: $l-gap;
-    position: relative;
-
-    .circle__girl {
-      img {
-        margin-left: $l-gap;
-        position: initial;
-      }
+    p {
+      font-family: Comfortaa;
+      font-size: 24px;
+      font-weight: 400;
+      line-height: 27px;
+      letter-spacing: 0em;
+      text-align: center;
     }
 
     img {
+      width: 50px;
       position: absolute;
+      bottom: 1rem;
+      margin: 0 auto;
+      right: 0;
+      left: 0;
+      cursor: pointer;
     }
+  }
 
-    .img1 {
-      bottom: 4rem;
-      left: $l-gap;
+  .image__overcontainer {
+    height: 100%;
+    position: absolute;
+    top: 0;
+    width: 100%;
+
+    .spt {
+      position: absolute;
+      bottom: 1rem;
+      left: 4rem;
     }
-
-    .img3 {
-      top: 35%;
-      right: 17%;
-    }
-
-    .img2 {
-      bottom: 24%;
-      right: 17%;
+    .cpx {
+      position: absolute;
+      top: 8rem;
+      right: 4rem;
     }
   }
 }

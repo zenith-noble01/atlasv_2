@@ -1,43 +1,47 @@
 @import "./constants";
 @import "./variables";
 
-.app__header {
-  height: 70px;
-  @include flexBetween;
-  padding: 0 $l-gap;
+.landing__header {
+  padding: 0 10%;
+  font-family: $rucco;
+  height: 90px;
+  background: $l-b;
+  width: 100%;
+  @include flexAlign;
 
-  ul {
-    @include flexAlign;
-    gap: $sm-gap;
-  }
+  .header__container {
+    @include flexBetween;
+    width: 100%;
+    .logo {
+      @include flexDirection(column);
+      color: white;
+      font-size: 24px;
+      gap: 0.2rem;
+      img {
+        width: 45px;
+      }
+    }
 
-  .logo {
-    font-size: $gap;
-    font-weight: bold;
-    color: $mandy;
-  }
+    .header__routes {
+      @include flexAlign;
+      gap: 2rem;
 
-  .header__routes ul a {
-    color: $text-secondary;
-    font-family: $space-grotesk;
-  }
+      li {
+        font-size: 15px;
+        font-weight: 400;
+        line-height: 18px;
+        letter-spacing: 0em;
+        text-align: left;
+        color: $primary-color;
 
-  .header__cta {
-    @include flexAlign;
+        &:last-child {
+          margin-left: 4rem;
+        }
+      }
 
-    gap: $gap;
-
-    .cta__btn {
-      border: 1px solid $mandy;
-      transition: $transition;
-      color: $mandy;
-      padding: $xs-gap $gap;
-      border-radius: $gap;
-      font-weight: bold;
-
-      &.active {
-        background: $mandy;
-        color: $hint-of-red;
+      a.active {
+        color: $secondary-color;
+        cursor: pointer;
       }
     }
   }

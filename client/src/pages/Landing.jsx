@@ -1,9 +1,8 @@
-import React from "react";
 import { Header, Hero } from "../components";
 
 const Landing = () => {
   return (
-    <div className="app__landing">
+    <div>
       <Header />
       <Hero />
     </div>

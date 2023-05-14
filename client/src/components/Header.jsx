@@ -1,34 +1,24 @@
-import React from "react";
+import { logo } from "../assets";
 import "../styles/header.scss";
 import { headerRoutes } from "../constants";
-import { Link } from "react-router-dom";
-import { LoginRegisterButton } from "./";
-import { motion } from "framer-motion";
-import { fadeIn } from "../utils/motion";
+import { NavLink } from "react-router-dom";
 
 const Header = () => {
   return (
-    <div className="app__header">
-      <div className="logo">
-        <p>atlas.</p>
-      </div>
-      <div className="header__routes">
-        <ul>
+    <div className="landing__header">
+      <nav className="header__container">
+        <div className="logo">
+          <img src={logo} alt="atlas learning platform logo" />
+          atlas
+        </div>
+        <ul className="header__routes">
           {headerRoutes.map((route, index) => (
-            <motion.li
-              key={index}
-              variants={fadeIn("down", "tween", index * 0.05, 0.5)}
-              initial="hidden"
-              animate="show"
-            >
-              <Link to={route.url}>{route.name}</Link>
-            </motion.li>
+            <li key={index}>
+              <NavLink to={route.path}>{route.name}</NavLink>
+            </li>
           ))}
         </ul>
-      </div>
-      <div className="header__cta">
-        <LoginRegisterButton />
-      </div>
+      </nav>
     </div>
   );
 };
